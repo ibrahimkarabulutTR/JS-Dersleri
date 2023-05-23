@@ -15,7 +15,7 @@ const dogumTarihi = 1999
 
 // Çoklu değişken basımı için
 let lise = true,
-  universite = true
+	universite = true
 
 // 1.Değişken basma yöntemi
 console.log('Merhaba benim adım '+ad+' Soyadım '+soyad+' Dogum Yılım: '+dogumTarihi)
@@ -31,3 +31,13 @@ console.log(yas+=5);
 let ad = null;
 console.log(ad);
 console.log(ad+=5);
+
+// Değişken türünü sormak için
+console.log(typeof yas); 
+
+// Değişkenin türünü değiştirmek için
+yas = String(yas);
+console.log(typeof yas);
+
+let sayi = Number("Ali");
+console.log(sayi);
