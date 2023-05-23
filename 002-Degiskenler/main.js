@@ -21,3 +21,13 @@ let lise = true,
 console.log('Merhaba benim adım '+ad+' Soyadım '+soyad+' Dogum Yılım: '+dogumTarihi)
 // 2.Template string yöntemi
 console.log(`Merhaba benim adım ${ad} Soyadım ${soyad} Dogum Yılım: ${dogumTarihi}`)
+
+// Undefined yani tanımlanmamış
+let yas;
+console.log(yas);
+console.log(yas+=5);
+
+// Null yani içi boş
+let ad = null;
+console.log(ad);
+console.log(ad+=5);
