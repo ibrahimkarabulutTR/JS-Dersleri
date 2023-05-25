@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+*{
+	margin:0;
+	padding:0;
+}
+body {
+	background: #faebd7;
+	height: 100vh;
+	overflow: hidden;
+	font-family: "Poppins", sans-serif;
+	display: grid;
+	place-items: center;
+}
+
+#btnOpen {
+	background: #ff7f50;
+	border: 0;
+	font-weight: 500;
+	font-size: 18px;
+	color: #fff;
+	padding: 16px 32px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.1s ease-in-out;
+}
+#btnOpen:hover {
+	background: #ff4500;
+	scale: 1.03;
+}
+#btnOpen:active {
+	scale: 1;
+}
+
+#pop-up {
+	position: absolute;
+	inset: 0;
+	background: rgba(244, 164, 96, 0.5);
+	display: none;
+	place-items: center;
+	overflow: auto;
+	padding: 20px;
+}
+#pop-up .content {
+	position: relative;
+	background: #fff;
+	max-width: 400px;
+	width: calc(100% - 40px);
+	max-height: 400px;
+	border-radius: 25px;
+	padding: 25px;
+	display: grid;
+	place-items: center;
+	box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
+	aspect-ratio: 1;
+}
+#pop-up .content #btnClose {
+	position: absolute;
+	inset: 20px 20px auto auto;
+	background: transparent;
+	width: 45px;
+	height: 45px;
+	font-size: 20px;
+	color: #ff6347;
+	border: 0;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.1s ease-in-out;
+}
+#pop-up .content #btnClose:hover {
+	background: #ff4500;
+	color: #fff;
+}
+#pop-up .content #btnClose:active {
+	background: #ff0000;
+}
+#pop-up .content h1 {
+	font-size: 20px;
+	font-weight: 300;
+	color: #333;
+}
+
+.developer {
+	position: fixed;
+	inset: auto 10px 10px auto;
+	z-index: 10;
+	color: #333;
+}
+.developer a {
+	margin-left: 5px;
+	color: royalblue;
+	text-decoration: none;
+}
