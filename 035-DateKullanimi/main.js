@@ -1,0 +1,16 @@
+const now = new Date()
+console.log(now)
+console.log(typeof now)
+console.log(`Şuan ${now.getFullYear()} Yılındayız`)
+// Ocak Ayı 0 olduğu için aylar -1 olarak gelir
+console.log(`Şuan ${now.getMonth()}.Aydayız`)
+console.log(`Şuan Ayın ${now.getDate()} deyiz`)
+console.log(`Şuan Haftanın ${now.getDay()}. günündeyiz`)
+console.log(`Şuan Saat ${now.getHours()}`)
+console.log(`Şuan Dakika ${now.getMinutes()}`)
+console.log(`Şuan Saniye ${now.getSeconds()}`)
+console.log(`Time Stamp ${now.getTime()}`)
+
+console.log(now.toDateString())
+console.log(now.toTimeString())
+console.log(now.toLocaleString())

@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: #111827;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.box-wrapper {
+  max-width: 400px;
+  width: 100%;
+  display: grid;
+  gap: 25px;
+}
+.head {
+  background: rgba(255,255,255,.1);
+  padding: 13px 15px;
+  font-size: 20px;
+}
+.box-area {
+  width: 100%;
+  list-style: none;
+  padding: 10px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.1);
+  display: grid;
+  gap: 10px;
+}
+.box-item {
+  background: rgba(255,255,255,.25);
+  width: 100%;
+  line-height: 45px;
+  padding-inline: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.del {
+  background: rgba(255,255,255,.1);
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
+}
+.del:hover {
+  background: red;
+}
+.inputbox {
+  background: rgba(255,255,255,1);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  font-size: 15px;
+  padding: 13px 15px;
+  display: block;
+}
+.addNew {
+  width: 100%;
+}
+#addto {
+  border: 10px solid #111827;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.1);
+}

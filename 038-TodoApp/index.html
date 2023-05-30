@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="İbrahim Karabulut" />
+  <title>38-ToDo Uygulaması</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="box-wrapper">
+    <h2 class="head">ToDo App</h2>
+    <ul class="box-area">
+      <form action="post" class="searchNew">
+        <input class="inputbox" type="text" name="searchto" id="searchto" placeholder="Yeni Görev Ekle">
+      </form>
+      <li class="box-item"><span class="mission">Sabah Kalk</span> <i class="bi bi-trash del"></i></li>
+      <li class="box-item"><span class="mission">İşe Git</span> <i class="bi bi-trash del"></i></li>
+      <li class="box-item"><span class="mission">Okula Git</span> <i class="bi bi-trash del"></i></li>
+    </ul>
+    <form action="post" class="addNew">
+      <input class="inputbox" type="text" name="addto" id="addto" placeholder="Yeni Görev Ekle">
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
