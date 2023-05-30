@@ -6,6 +6,7 @@ let passRequire = /^[a-z,A-Z,0-9,\,&,*,!,+]{8,16}$/
 
 signupForm.addEventListener('keyup', e => {
 	e.preventDefault();
+	// passRequire.test(signupForm.passaddress.value)
 	if(e.target.value.search(passRequire) >= 0) {
 		printPass.textContent = `your password meet the required condition`
 		input.style.boxShadow="0 0 0 3px rgba(0,150,0,.5)"

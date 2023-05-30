@@ -10,11 +10,12 @@ let soyad = 'Karabulut'
 soyad = 'Blackcloud'
 
 // Lokal Global farkı vardır
-// Degğişken sonradan değiştirilemez
+// Değişken sonradan değiştirilemez
 const dogumTarihi = 1999
 
 // Çoklu değişken basımı için
-let lise = true,
+let 
+	lise = true,
 	universite = true
 
 // 1.Değişken basma yöntemi
