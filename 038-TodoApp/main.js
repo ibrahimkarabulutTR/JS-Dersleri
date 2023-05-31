@@ -20,23 +20,26 @@ addNew.addEventListener('submit', e => {
 })
 
 
-var Global_Items = [];
-const missionList = () => 
-{
-  var itemList = []
-  for(let i=0;i<boxItem.length;i++)
-  {
-    itemList.push(boxItem[i])
+var itemList = []
+const missionList = () => {
+  var newList = []
+  for(let i=0;i<boxItem.length;i++){
+    newList.push(boxItem[i])
   }
-  return itemList;
+  itemList = newList
 }
-
-Global_Items = missionList();
+missionList();
 
 searchNew.addEventListener('keyup', e => {
   e.preventDefault();
-  console.log(Global_Items)
-  const newArea = Global_Items.filter(item => item.innerText.includes(`${e.target.value}`))
-  // console.log(newArea)
+  console.log(itemList)
+  const newArea = itemList.filter(item => item.innerText.includes(`${e.target.value}`))
   boxArea.innerHTML = newArea[0].outerHTML
+  if(e.target.value == '') { 
+    let fullList
+    for(let i=0;i<itemList.length;i++) {
+      fullList += itemList[i].outerHTML
+    }
+    boxArea.innerHTML = fullList
+  }
 })
