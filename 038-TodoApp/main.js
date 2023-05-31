@@ -1,4 +1,4 @@
-const boxArea = document.querySelector('.box-area')
+const boxArea = document.querySelector('.item-area')
 const boxItem = document.querySelectorAll('.box-item')
 const addNew = document.querySelector('.addNew')
 const searchNew = document.querySelector('.searchNew')
@@ -16,19 +16,27 @@ addNew.addEventListener('submit', e => {
   let value = addNew.addto.value;
   const code = `<li class="box-item">${value} <i class="bi bi-trash del"></i></li>`
   boxArea.innerHTML += code;
+  missionList()
 })
+
+
+var Global_Items = [];
+const missionList = () => 
+{
+  var itemList = []
+  for(let i=0;i<boxItem.length;i++)
+  {
+    itemList.push(boxItem[i])
+  }
+  return itemList;
+}
+
+Global_Items = missionList();
 
 searchNew.addEventListener('keyup', e => {
   e.preventDefault();
-  let array = []
-  for(let i=0;i<boxItem.length;i++) {
-    array.push = boxItem[i]
-  }
-  console.log(array)
-  let newList = array.filter((x, number) => searchNew.searchto.value == array[number])
-  boxArea.innerHTML = newList
+  console.log(Global_Items)
+  const newArea = Global_Items.filter(item => item.innerText.includes(`${e.target.value}`))
+  // console.log(newArea)
+  boxArea.innerHTML = newArea[0].outerHTML
 })
-
-// for(let i=0;i<boxArea.children.length;i++){
-//   console.log(boxArea.children[i].textContent)
-// }
