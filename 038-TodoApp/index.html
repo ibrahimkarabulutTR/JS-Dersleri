@@ -12,10 +12,10 @@
 </head>
 <body>
   <div class="box-wrapper">
-    <h2 class="head">ToDo App</h2>
+    <h2 class="head">Yapılacak Listesi</h2>
     <ul class="box-area">
       <form action="post" class="searchNew">
-        <input class="inputbox" type="text" name="searchto" id="searchto" placeholder="Yeni Görev Ekle">
+        <input class="inputbox" type="text" name="searchto" id="searchto" placeholder="Görev Ara">
       </form>
       <div class="item-area">
         <li class="box-item"><span class="mission">Sabah Kalk</span> <i class="bi bi-trash del"></i></li>
@@ -25,6 +25,7 @@
     </ul>
     <form action="post" class="addNew">
       <input class="inputbox" type="text" name="addto" id="addto" placeholder="Yeni Görev Ekle">
+      <button id="add-btn" type="submit">+</button>
     </form>
   </div>
   <script src="main.js"></script>

@@ -1,5 +1,5 @@
 const boxArea = document.querySelector('.item-area')
-const boxItem = document.querySelectorAll('.box-item')
+let boxItem = document.querySelectorAll('.box-item')
 const addNew = document.querySelector('.addNew')
 const searchNew = document.querySelector('.searchNew')
 const mission = document.querySelector('.mission')
@@ -10,19 +10,10 @@ boxArea.addEventListener('click',e => {
   }
 })
 
-
-addNew.addEventListener('submit', e => {
-  e.preventDefault();
-  let value = addNew.addto.value;
-  const code = `<li class="box-item">${value} <i class="bi bi-trash del"></i></li>`
-  boxArea.innerHTML += code;
-  missionList()
-})
-
-
 var itemList = []
 const missionList = () => {
   var newList = []
+  boxItem = document.querySelectorAll('.box-item')
   for(let i=0;i<boxItem.length;i++){
     newList.push(boxItem[i])
   }
@@ -30,16 +21,27 @@ const missionList = () => {
 }
 missionList();
 
+addNew.addEventListener('submit', e => {
+  e.preventDefault();
+  let value = addNew.addto.value;
+  const code = `<li class="box-item">${value} <i class="bi bi-trash del"></i></li>`
+  boxArea.innerHTML += code;
+  missionList()
+  addNew.addto.value = "";
+})
+
+
+
 searchNew.addEventListener('keyup', e => {
   e.preventDefault();
-  console.log(itemList)
-  const newArea = itemList.filter(item => item.innerText.includes(`${e.target.value}`))
-  boxArea.innerHTML = newArea[0].outerHTML
-  if(e.target.value == '') { 
-    let fullList
-    for(let i=0;i<itemList.length;i++) {
-      fullList += itemList[i].outerHTML
+  let newArea = itemList.map(item => {
+    item.style.display="none"
+    if(item.innerText.includes(`${e.target.value}`)) {
+      item.style.display="flex"
+      return item
     }
-    boxArea.innerHTML = fullList
-  }
+    else return item
+  })
+  let itemler = newArea.forEach(e => e.target)
+  newArea.innerHTML = itemler
 })

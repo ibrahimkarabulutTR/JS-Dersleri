@@ -7,8 +7,9 @@
 }
 body {
   height: 100vh;
-  background: #111827;
+  background: #18181B;
   font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   font-size: 15px;
   color: #fff;
   display: grid;
@@ -21,7 +22,7 @@ body {
   gap: 25px;
 }
 .head {
-  background: rgba(255,255,255,.1);
+  text-align: center;
   padding: 13px 15px;
   font-size: 20px;
 }
@@ -33,25 +34,32 @@ body {
   display: grid;
   gap: 10px;
 }
+.item-area {
+  display: grid;
+  gap: 10px;
+}
 .box-item {
-  background: rgba(255,255,255,.25);
+  background: #737373;
   width: 100%;
-  line-height: 45px;
-  padding-inline: 20px 0;
+  line-height: 55px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  padding-inline: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
 .del {
-  background: rgba(255,255,255,.1);
-  width: 45px;
-  height: 45px;
+  background: rgba(0, 0, 0, .1);
+  width: 55px;
+  height: 55px;
   text-align: center;
-  line-height: 45px;
+  line-height: 55px;
   cursor: pointer;
   transition: background 200ms ease-in-out;
 }
 .del:hover {
-  background: red;
+  background: rgba(0, 0, 0, .5);
 }
 .inputbox {
   background: rgba(255,255,255,1);
@@ -63,8 +71,24 @@ body {
 }
 .addNew {
   width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.1);
+  display: flex;
 }
 #addto {
-  border: 10px solid #111827;
-  box-shadow: 0 0 0 2px rgba(255,255,255,.1);
+  width: auto;
+  flex-grow: 1;
+}
+#add-btn {
+  background: #16A34A;
+  width: 49px;
+  height: 49px;
+  color: #fff;
+  font-size: 30px;
+  flex: 0 0 49px;
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
+}
+#add-btn:hover {
+  background: #15803D;
 }
